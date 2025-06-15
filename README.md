@@ -13,10 +13,11 @@ This machine learning project predicts car sales using the Support Vector Regres
   - [Installation](#installation)
   - [Getting Started](#getting-started)
     - [Option 1: Run the Jupyter Notebook](#option-1-run-the-jupyter-notebook)
-    - [Option 2: Run the Python Script](#option-2-run-the-python-script)
+    - [Option 2: Run the Streamlit App](#option-2-run-the-streamlit-app)
   - [How It Works](#how-it-works)
   - [Input \& Output](#input--output)
-  - [Example Output](#example-output)
+    - [Input:](#input)
+    - [Output:](#output)
 
 
 ## Project Structure
@@ -32,13 +33,19 @@ oop project/
 
 ## Description
 
-This project explores car sales prediction using historical data. It includes data exploration, preprocessing, model training, and evaluation. The final trained model and preprocessing scaler are saved for deployment.
+This project predicts car sales based on features like price, engine size, horsepower, and fuel efficiency. It covers:
+
+- Data preprocessing and scaling
+- Model training with SVR
+- Evaluation using RMSE and R²
+- Saving model and scaler for deployment
 
 ## Features
 
 * Clean and modular code using custom classes: `DataLoader`, `Preprocessor`, etc.
 * Visualizations using `matplotlib` and `seaborn`
 * Data scaling using `StandardScaler`
+* Interactive Streamlit GUI
 * SVR-based regression model
 * Model evaluation with RMSE and R² metrics
 * Saved model and scaler for future inference
@@ -51,6 +58,7 @@ This project explores car sales prediction using historical data. It includes da
 * matplotlib, seaborn
 * scikit-learn
 * pickle
+* streamlit
 
 ## Installation
 
@@ -63,7 +71,7 @@ pip install matplotlib
 pip install seaborn
 pip install scikit-learn
 pip install jupyter
-pip install pickle
+pip install streamlit
 ```
 
 ## Getting Started
@@ -76,10 +84,10 @@ You can either use the notebook or the Python script:
 jupyter notebook project.ipynb
 ```
 
-### Option 2: Run the Python Script
+### Option 2: Run the Streamlit App
 
 ```bash
-python project.py
+streamlit run project.py
 ```
 
 ## How It Works
@@ -92,18 +100,18 @@ python project.py
 
 ## Input & Output
 
-* **Input:** `Car_sales_data.csv` with relevant sales features
-* **Output:**
+### Input:
+`Car_sales_data.csv` with features like:
+- **Price**
+- **Engine size**
+- **Horsepower**
+- **Fuel efficiency**
 
-  * Trained model: `car_sales_model_svm.pkl`
-  * Scaler: `scaler.pkl`
-  * Evaluation metrics printed in the console or notebook
+### Output:
+- **Trained model** → `car_sales_model_svm.pkl`
+- **Scaler** → `scaler.pkl`
+- **Prediction output** via Streamlit
+- **Evaluation results** shown in notebook/script
 
-## Example Output
 
-After running, you’ll see:
-
-* Head and tail of the data
-* Descriptive statistics
-* Evaluation scores like RMSE and R²
 
